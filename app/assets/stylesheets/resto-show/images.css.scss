@@ -1,0 +1,100 @@
+.controller-container {
+  position: relative;
+}
+.images-container {
+  height: 300px;
+  overflow: hidden;
+  .image {
+    display: none;
+    width: 100%;
+  }
+}
+.thumbs-container {
+  height: 100px;
+  .thumb {
+    cursor: pointer;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 25%;
+    .image {
+      display: none;
+      height: 100%;
+      width: 100%;
+    }
+    .new-image {
+      height:  100%;
+    }
+    .delete-btn {
+      background: red;
+      border-radius: 26px;
+      display: none;
+      color: #fff;
+      padding: 7px 11px;
+      position: absolute;
+      right: 1px;
+      top: -9px;
+      z-index: 10000000;
+    }
+    .select-btn {
+      background: gray;
+      border-radius: 26px;
+      display: none;
+      color: #fff;
+      padding: 7px 11px;
+      position: absolute;
+      right: 1px;
+      top: 31px;
+      z-index: 10000000;
+      margin: 0 auto;
+      text-align: center;
+      left: 0;
+      width: 35px;
+    }
+  }
+  .new-thumb {
+    background: #ccc;
+    cursor: pointer;
+    -webkit-transiton: background 0.5s;
+    transition: background 0.5s;
+    .fa-picture-o {
+      display: block;
+      font-size: 4em;
+      margin: 10px 0 0 0;
+      -webkit-transiton: color 0.5s;
+      transition: color 0.5s;
+    }
+    .fa-plus-circle {
+      display: block;
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      -webkit-transiton: color 0.5s;
+      transition: color 0.8s;
+    }
+    &:hover {
+      background: orange;
+      .fa-plus-circle, .fa-picture-o {
+        color: #fff;
+      }
+    }
+  }
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  img {
+    padding: 20%;
+  }
+}
+.overlay {
+  background: #fff;
+  height: 100%;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+.image-form {
+  display: none;
+}

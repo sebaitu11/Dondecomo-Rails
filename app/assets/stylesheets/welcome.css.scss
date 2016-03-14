@@ -1,0 +1,128 @@
+// Place all the styles related to the restos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  height: 100%;
+}
+
+body {
+  background: antiquewhite;
+  height: 100%;
+	overflow: auto;
+}
+
+.contenedor {
+  -webkit-box-shadow : 0 0 6px rgba(0,0,0,0.3);
+  margin:0.5em auto;
+  overflow: hidden;
+  width: 1000px;
+}
+.header {
+  background: antiquewhite;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 1000px;
+  .log-out {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    li {
+      font-size: 1em;
+      list-style-type: none;
+      text-decoration: none;
+      a {
+        color: #888;
+      }
+    }
+  }
+  .logo-normal {
+    margin: 0 auto;
+		width: 120px;
+    img {
+      width: 100%;
+    }
+  }
+  .logo-admin {
+    float: left;
+    width: 155px;
+		img {
+			width : 100%;
+		}
+    .donde {
+      float: left;
+    }
+    .como {
+      float: right;
+      margin-right: 6px;
+    }
+    h4 {
+      color: #fff;
+      font-size: 1.5em;
+      padding: 1em;
+      margin: 0;
+    }
+  }
+}
+.side-menu {
+	float: right;
+  margin-top: 2em;
+  overflow : hidden;
+	width: 560px;
+}
+.options-menu {
+  height: 100%;
+	margin-top: 1em;
+	overflow: hidden;
+  width: 100%;
+  .active {
+    a {
+      color : #000;
+      font-weight: bold;
+    }
+    i {
+      color: #000;
+    }
+  }
+  li {
+    display: block;
+		float: left;
+    list-style-type: none;
+    position: relative;
+    padding: 0 1.1em;
+    &:last-child {
+      padding-right: 0;
+    }
+    &:hover {
+      a {
+        color : #000;
+      }
+    }
+    a {
+      color: #7d7a75;
+      display: block;
+      height: 44px;
+      line-height: 42px;
+    }
+    i {
+			color: #888;
+      font-size: 1.3em;
+      margin-right: 15px;
+
+    }
+  }
+}
+
+@media screen and (max-width: 321px) {
+	.logo {
+		width :100% !important;
+		display: none !important;
+		img {
+			width: 100px !important;
+		}
+	}
+	.log-in-box {
+		top :4em !important;
+		width :279px !important;
+	}
+
+}

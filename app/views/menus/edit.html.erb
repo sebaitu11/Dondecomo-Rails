@@ -1,0 +1,11 @@
+<div class="contenedor">
+	<div class="canvas edit-content">
+	  <h1>Editando Menu</h1>
+		<h1 class="subtitle"><%= @menu.name %></h1>
+		<%= link_to resto_menus_path,class: "volver" do %>
+			<i class="fa fa-angle-left "></i>
+			<p>Volver a Menus</p>
+		<% end %>
+		<%= render 'form' %>
+	</div>
+</div>

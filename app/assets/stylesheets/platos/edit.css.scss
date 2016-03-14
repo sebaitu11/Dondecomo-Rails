@@ -1,0 +1,26 @@
+.form-plato {
+  div {
+    padding: 1em;
+  }
+  input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 4px;
+  }
+  .actions {
+    input {
+      background: #f06d22;
+      border:none;
+      border-radius: 12px;
+      color: #fff;
+      float: right;
+      padding: 0.8em;
+    }
+  }
+  .form-field:nth-child(even){
+    background: #f1f1f1;
+  }
+}
+
+
+///////////////////////////////

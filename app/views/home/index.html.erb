@@ -1,0 +1,186 @@
+<body>
+    
+      <!-- Loader -->
+      <div class="loader">
+        <div class="loader-img"></div>
+      </div>
+    
+    <!-- Top menu -->
+    <nav>
+      <a class="scroll-link" href="#top-content">Home</a>
+      <a class="scroll-link" href="#features">Ventajas</a>
+      <a class="scroll-link" href="#screenshots">Caracteristicas</a>
+      <a class="scroll-link" href="#contact">Contact</a>
+      <%= link_to "Administradores", new_owner_session_path %>
+      <div class="hide-menu">
+        <a href=""><i class="fa fa-bars"></i></a>
+      </div>
+    </nav>
+    <div class="show-menu">
+      <a href=""><i class="fa fa-bars"></i></a>
+    </div>
+    
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-sm-5 phone wow fadeInLeft">
+                          <%= image_tag("iphone6-app.jpg", class: "home-img") %>
+                        </div>
+                        <div class="col-sm-7 text wow fadeInUp home-info">
+                            <%= image_tag("logo-solo.png", class: "home-logo")  %>
+                            <h1>Donde Como</h1>
+                            <h3>Promueve tu restaurant de forma eficiente!</h3>
+                            <div class="description">
+                              Tienes hambre y no sabes dónde ir? Descubre dónde está la mejor opción, más cerca, averigua el menú del día, cómo llegar y más. Y lo mejor de todo, gratis! Descárgalo ahora!
+                            </div>
+                            <div class="top-download">
+                              <a class="btn big-link-1" href="#">Descargar</a>
+                              <a class="btn big-link-2 scroll-link" href="#features">Take a look</a>
+                            </div>
+                            <div class="top-download-small">
+                              <a href="#"><i class="fa fa-apple"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features -->
+        <div class="features-container section-container section-container-full-bg">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 features section-description wow fadeIn">
+                      <h2>Rápido y fácil de usar</h2>
+                      <p>
+                        Al descargar la App Donde Como encontraras de inmediato los mejores restaurantes a tu alrededor. Sin tener que crear una cuenta, sin publicidad y 100% confidencial.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-4 features-box wow fadeInUp">
+                    <div class="features-box-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </div>
+                      <h3>Encuentra</h3>
+                      <p>La aplicación encuentra la lista de restaurantes más cerca de ti para saciar tu hambre.</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInDown">
+                    <div class="features-box-icon">
+                      <i class="fa fa-eye"></i>
+                    </div>
+                      <h3>Descubre</h3>
+                      <p>Conoce lo mejor que tiene cada restaurant para ofrecer, desde el menu del día hasta wifi y cheque restaurant.</p>
+                    </div>
+                    <div class="col-sm-4 features-box wow fadeInUp">
+                    <div class="features-box-icon">
+                      <i class="fa fa-bolt"></i>
+                    </div>
+                      <h3>Optimiza</h3>
+                      <p>Con un solo botón podrás encontrar la ruta más corta para llegar a tu destino.</p>
+                    </div>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Screenshots -->
+        <div class="screenshots-container section-container">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 screenshots section-description wow fadeIn">
+                      <h2>Si eres un Restaurante</h2>
+                      <p>
+                        Entregamos las herramientas que permiten a los restaurantes actualizar y promocionar su negocio de la mejor forma, rápida y simple de usar
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-5 screenshots-box wow fadeInLeft">
+                      <%= image_tag("screenshots/1.jpg", class: "screenshot-img-active") %>
+                      <%= image_tag("screenshots/2.jpg") %>
+                      <%= image_tag("screenshots/3.jpg") %>
+                      <div class="screenshots-nav"></div>
+                  </div>
+                  <div class="col-sm-7 screenshots-box wow fadeInUp">
+                      <div class="screenshots-box-text">
+                        <div class="screenshots-box-text-icon"><i class="fa fa-support"></i></div>
+                        <h3>Soporte</h3>
+                        <div class="screenshots-box-text-description">
+                          El mejor soporte y atención personalizada para que siempre puedas operar
+                        </div>
+                      </div>
+                      <div class="screenshots-box-text">
+                        <div class="screenshots-box-text-icon"><i class="fa fa-user"></i></div>
+                        <h3>Auto Administración</h3>
+                        <div class="screenshots-box-text-description">
+                          Descubre nuestra interfaz propietaria, simple y fácil de usar, es la mejor forma de comunicarse directamente con sus clientes
+                        </div>
+                      </div>
+                      <div class="screenshots-box-text">
+                        <div class="screenshots-box-text-icon"><i class="fa fa-cloud"></i></div>
+                        <h3>Modelo Saas</h3>
+                        <div class="screenshots-box-text-description">
+                          Sin tener que generar una fuerte inversión, nuestro modelo de cobro es simple y transparente. Conoce los detalles haciendo click aquí
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+       
+        <!-- Contact us -->
+        <div class="contact-container section-container">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12 contact section-description wow fadeIn">
+                    <div class="section-description-icon"><i class="fa fa-paper-plane-o"></i></div>
+                      <h2>Contact us</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12 contact-form wow fadeInUp">
+                      <form role="form" action="assets/contact.php" method="post">
+                        <div class="form-group">
+                          <label class="sr-only" for="contact-email">Email</label>
+                            <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
+                          </div>
+                          <div class="form-group">
+                            <label class="sr-only" for="contact-subject">Subject</label>
+                            <input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
+                          </div>
+                          <div class="form-group">
+                            <label class="sr-only" for="contact-message">Message</label>
+                            <textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+                          </div>
+                          <button type="submit" class="btn">Send message</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+          <div class="container">
+              <div class="row">
+                    <div class="col-sm-7 footer-copyright">
+                      &copy; Sarae Bootstrap Template by <a href="http://azmind.com">Azmind</a>.
+                    </div>
+                    <div class="col-sm-5 footer-social">
+                    </div>
+              </div>
+          </div>
+        </footer>
+
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>

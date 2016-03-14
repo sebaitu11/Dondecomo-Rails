@@ -1,0 +1,40 @@
+<script type="text/javascript">
+   $("#new_plato").submit(function(){
+    $(".spiner").fadeIn();
+    $(".spiner").spin({color: "#fff", speed: 1.8})    
+    $("input:submit").prop("disabled", true).css("background","#ccc")
+
+  });
+</script>
+
+
+<div class="form-plato">
+  <%= form_for([@plato.categoria,@plato]) do |f| %>
+    <div class="form-field">
+      Nombre : <%= f.text_field :name %>
+    </div>
+    <div class="form-field">
+      Descripción : <%= f.text_field :description , :maxlength => 50 ,:ssize => "30"%>
+    </div>
+    <div class="form-field">
+      Precio : <%= f.text_field :price %>
+    </div>
+
+    <% if @plato.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@plato.errors.count, "error") %> prohibited this plato from being saved:</h2>
+
+        <ul>
+        <% @plato.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit ( f.object.new_record? ? "Crear Plato" : "Actualizar Plato") %>
+    </div>
+  <% end %>  
+</div>
+

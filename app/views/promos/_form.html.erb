@@ -1,0 +1,54 @@
+<script type="text/javascript">
+   $("#new_promo").submit(function(){
+    $(".spiner").fadeIn();
+    $(".spiner").spin({color: "#fff", speed: 1.8})
+    $("input:submit").prop("disabled", true).css("background","#ccc")
+
+  });
+</script>
+<div class="col-sm-12">
+	<div class="form-item">
+	  <%= form_for ([current_owner.resto, @promo]), :html => { :multipart => true } do |f| %>
+			 <div class="col-sm-6">
+		     <div class="form-field">
+		      <p>Nombre </p>
+		      <%= f.text_field :name ,:maxlength => 200 ,:size => "30"%>
+		     </div>
+		     <div class="form-field">
+		      <p>Descripción</p>
+		      <%= f.text_area :description ,:maxlength => 300 ,:size => "60x6"%>
+		     </div>
+			 </div>
+			 <div class="col-sm-6">
+		     <div class="form-field image">
+				 	<p>Imagen </p>
+		      <%= f.file_field :avatar %>
+				 <div class="image-container">
+					<% if @promo.new_record? %>
+						<h1>Recuerda Subir una imagen</h1>
+					<% else %>
+						<img src="<%= @promo.image_url%>">
+					<% end %>
+				 </div>
+		     </div>
+			 </div>
+
+	    <% if @promo.errors.any? %>
+	      <div id="error_explanation">
+	        <h2><%= pluralize(@promo.errors.count, "error") %> prohibited this promo from being saved:</h2>
+
+	        <ul>
+	        <% @promo.errors.full_messages.each do |message| %>
+	          <li><%= message %></li>
+	        <% end %>
+	        </ul>
+	      </div>
+	    <% end %>
+
+	    <div class="actions">
+	      <%= f.submit  ( f.object.new_record? ? "Crear Promoción" : "Actualizar Promoción") %>
+	    </div>
+	  <% end %>
+
+	</div>
+</div>

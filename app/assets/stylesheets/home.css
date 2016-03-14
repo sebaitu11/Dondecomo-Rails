@@ -1,0 +1,383 @@
+/*
+*= require font-awesome
+*/
+
+body {
+  margin: 0;
+}
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1.5em 0;
+  position: relative;
+	overflow : hidden;
+  width: 1000px;
+}
+#admin-panel {
+	border-radius: 10px 0px 0 10px;
+	top: 50px;
+	right: 0;
+	position: absolute;
+	background: #f06d22;
+	padding: 0.2em 1em;
+	color: #fff;
+	text-decoration:none;
+	z-index:10000000;
+}
+#admin-panel p {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 0.8em;
+	font-weight: lighter;
+}
+.left {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+.right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.bar {
+  background: rgba(0,0,0,0.6);
+  height: 10px;
+  width: 100%;
+}
+.logo p  {
+  color: #999;
+  margin: 0;
+  text-align: center;
+  font-size: 21px;
+  font-family: sans-serif;
+}
+
+.logo img {
+  width: 150px;
+}
+.logo {
+  height: 145px;
+  float: left;
+  position: relative;
+  width: 146px;
+}
+
+.center {
+  overflow: hidden;
+  width: 100%;
+}
+.text {
+  float: left;
+  padding: 4.4em 3em;
+  width: 100%;
+}
+
+.text h1,p {
+  margin: 16px 0;
+}
+
+.text h1 {
+  border-bottom: 1px solid #ccc;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+  font-size: 4em;
+  margin-bottom: 2px;
+}
+.text p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  margin-top: 8px;
+}
+
+.appstore {
+  width: 11em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 2em 0 ;
+  background: #f06d22;
+  display: block;
+  border-radius: 6px;
+  padding: .75em 2em;
+}
+
+.appstore img {
+  float: left;
+  width: 30px;
+}
+
+.appstore .appstore-text {
+  position: relative;
+  font-size: .6875em;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  padding-left: 5em;
+  display: block;
+  font-weight: 500
+}
+
+.appstore-text:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
+  top: 0;
+  left: 0;
+  /*background: url(<%= asset_data_uri 'icon_apple.min.svg' %>) no-repeat center;*/
+}
+.appstore-text span {
+  display: block;
+  font-size: 2em;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.iphone-image {
+  position: absolute;
+  right: 0;
+  top: 1.5em;
+}
+.left-iphone {
+	float :left;
+	height: 27em;
+  padding: 1em 0;
+	position :relative;
+}
+.image-overlay {
+		background: #fff;
+		display: block;
+		height: 41px;
+		position: absolute;
+		padding: 0em;
+		z-index: 1;
+		opacity: 1;
+		bottom: -1em;
+		width: 100%;
+		-webkit-filter: blur(6px);
+}
+.image-overlay-right {
+		background: #fff;
+		display: block;
+		height: 41px;
+		position: absolute;
+		padding: 0em;
+		z-index: 1;
+		opacity: 1;
+		bottom: 0.5em;
+		width: 100%;
+		-webkit-filter: blur(6px);
+}
+.right-iphone {
+	 padding: 1em 0;
+	 float: right;
+	 height: 27em;
+}
+.left-iphone img {
+  width: 250px !important;
+}
+.right-iphone img {
+  width: 220px !important;
+}
+.smaller img{
+	width: 220px !important;
+}
+.iphone-image img {
+  width: 300px;
+}
+
+.text-features h1{
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  font-weight: lighter;
+  padding: 0 1.5em;
+  text-align:center;
+}
+.text-features h4 {
+  padding: 0.5em;
+  background: #f06d22;
+  color: #fff;
+  width: 27px;
+  text-align: center;
+  border-radius: 64px;
+  font-size: 1.4em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+  position: absolute;
+  top: 1.8em;
+  left: 2em;
+}
+.text-features {
+  overflow: hidden;
+  position: relative;
+  width: 75%;
+  float: right;
+  padding: 3em 0px;
+}
+
+#barrios {
+	margin-top: 3em;
+	overflow:hidden;
+}
+.barrio-item {
+	border-right: 1px solid #ccc;
+	float: left;
+	list-style-type :none;
+	margin-top:1em;
+	padding: 0 1em;
+	width:20%;
+}
+.barrio-item h3 {
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: bold;
+		font-size:1em;
+		text-align : center;
+}
+.barrio-item p {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: lighter;
+	text-align: center;
+}
+
+.step-2 {
+	margin-top: 3em;
+	text-align: center;
+}
+
+.step-2 h3 {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	margin: 2em 3em;
+	text-align: left;
+
+}
+.left-step {
+	float: left !important;
+}
+
+@media (max-device-width: 361px) {
+	.container {
+		width: 320px;
+	}
+	header {
+		overflow:hidden;
+	}
+	#admin-panel {
+		background : #fff;
+		color :#f06d22;
+	}
+	.logo {
+		height: 83px;
+		width: 120px;
+	}
+	.logo img {
+		width: 80px;
+	}
+	.text {
+		float : none;
+		padding :0.4em 1em;
+		width: initial;
+	}
+	.text h1 {
+		font-size :2em;
+		margin: 0;
+		text-align:center;
+		padding-bottom: 0.3em;
+	}
+	.text p {
+		font-size:1.1em;
+		text-align : center;
+	}
+	.appstore {
+		margin: 1em auto;
+		width: 59%;
+	}
+	.iphone-image {
+		height:208px;
+		position: static;
+		overflow:hidden;
+	}
+	.iphone-image img {
+		display: block;
+		margin:0 auto;
+		width: 240px;
+	}
+
+	.left-iphone{
+		display:none;
+	}
+	.text-features {
+		padding :0;
+		width: 100%;
+	}
+	.text-features h4 {
+		left :6em;
+		top: -1.2em;
+	}
+	.text-features h1 {
+		font-size :1.3em;
+		padding : 2em 1.5em 0;
+	}
+	#barrios {
+		margin-top: 0;
+	}
+	#barrios ul {
+		overflow :hidden;
+		padding :0;
+	}
+	.barrio-item {
+		padding :0 1em;
+		width: 38%;
+	}
+	.barrio-item:nth-child(even){
+		border:none;
+	}
+	#overlay {
+		background: #fff;
+		display: block;
+		height: 30px;
+		position: absolute;
+		padding: 0em;
+		z-index: 1;
+		opacity: 1;
+		top: 32em;
+		width: 100%;
+		-webkit-filter: blur(6px);
+	}
+
+	.right-iphone {
+		display:none;
+	}
+
+	.step-2 li h3 {
+		text-align :center;
+	}
+
+}

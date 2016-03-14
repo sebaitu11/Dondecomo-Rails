@@ -1,0 +1,40 @@
+<div class="contenedor content">
+  <div class="canvas">
+    <h1>Menus del Dia</h1>
+		<h1 class="subtitle">Recuerda Actualizar los menus</h1>
+
+<% if @menus.length > 0 %>
+    <table>
+      <tbody>
+      <tr class="table-title">
+        <td>Imagen</td>
+        <td>Nombre</td>
+        <td>Entrada</td>
+        <td>Fondo</td>
+        <td>Precio</td>
+      </tr>
+	        <% @menus.each do |menu| %>
+						<tr class="table-row">
+               <td class="mini-image"><img src="<%= menu.image_url%>"></td>
+		           <td><%= menu.name %></td>
+		           <td><%= menu.entrada %></td>
+		           <td><%= menu.fondo %></td>
+		           <td>$<%= menu.price %></td>
+							 <td class="padding"><%= link_to 'Editar',edit_resto_menu_path(current_owner.resto,menu), class: "editar"%></td>
+		           <td class="padding padding-right"><%= link_to 'Eliminar',resto_menu_path(current_owner.resto,menu), class: "eliminar",method: :delete, data: { confirm: '¿Estas Seguro que deseas eliminar esta Promoción?' } %></td>
+		        </tr>
+        <% end %>
+      </tbody>
+    </table>
+<% else %>
+  <div>
+    <h1>No hay menus todavia</h1>
+  </div>
+<% end %>
+
+    <br>
+
+    <%= link_to 'Añadir Menu', new_resto_menu_path, class: "new-item"  %>
+
+  </div>
+</div>

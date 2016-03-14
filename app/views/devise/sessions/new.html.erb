@@ -1,0 +1,26 @@
+<div class="mesero-image">
+  <%= image_tag("mesero.png") %>
+</div>
+<div class="log-in-box">
+  <h2>Ingresa al admin de</h2>
+	<h1>Dónde Como</h1>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div>
+    	<%= f.email_field :email, autofocus: true ,:placeholder => "Email"%>
+		</div>
+    <div>
+      <%= f.password_field :password, autocomplete: "off" ,:placeholder => "Contraseña"%>
+		</div>
+
+    <div ><%= f.submit "Iniciar Sesión" , class: "login-button"%></div>
+  <% end %>
+	<div id="help">
+    <%= link_to "Olvidaste tu contraseña? click aqui para recuperarla" , new_owner_password_path %>
+	</div>
+</div>
+	<div id="not-registered">
+		<a href="sign_up">
+			<h4>Aun no apareces en dónde como,<bold>Inscríbete Hoy</bold></h4>
+		</a>
+	</div>

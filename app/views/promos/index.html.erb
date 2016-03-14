@@ -1,0 +1,36 @@
+<div class="contenedor content">
+  <div class="canvas">
+    <h1>Promociones</h1>
+		<h1 class="subtitle"></h1>
+
+<% if @promos.length > 0 %>
+    <table>
+      <tbody>
+      <tr class="table-title">
+        <td>Imagen</td>
+        <td>Nombre</td>
+        <td>Descripción</td>
+        <td>Precio</td>
+      </tr>
+        <% @promos.each do |promo| %>
+          <tr class="table-row">
+            <td class="mini-image"><img src="<%= promo.image_url%>"></td>
+            <td><%= promo.name %></td>
+            <td><%= promo.description %></td>
+            <td>$<%= promo.price %></td>
+            <td><%= link_to 'Editar',edit_resto_promo_path(current_owner.resto,promo),class: "editar"  %></td>
+            <td><%= link_to 'Eliminar', resto_promo_path(current_owner.resto,promo), class: "eliminar",method: :delete, data: { confirm: '¿Estas Seguro que deseas eliminar esta Promoción?' }%></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+<% else %>
+  <div>
+    <h1>No hay promociones todavia</h1>
+  </div>
+<% end %>
+    <br>
+
+    <%= link_to 'Añadir Promoción', new_resto_promo_path, class: "new-item"  %>
+  </div>
+</div>

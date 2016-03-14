@@ -1,0 +1,10 @@
+<div class="contenedor">
+  <div class="canvas">
+    <h1>Editando <%= @plato.name %> | <%= @categoria.name %> </h1>
+
+    <%= render 'form' %>
+
+    <%= link_to 'Volver a ' + @categoria.name, edit_categoria_path(@plato.categoria_id), class: "volver" %>
+  </div>
+  
+</div>

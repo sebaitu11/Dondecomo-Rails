@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RestoApp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:200,300' rel='stylesheet' type='text/css'>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render partial: "shared/header" %>
+<%= yield %>
+  <script type="text/javascript">
+    <% flash.each do |type, message| %>
+      <% if type == "alert" %>
+        toastr.error(<%= raw message.inspect %>)
+      <% end %>
+      <% if type == "notice"%>
+        toastr.success(<%= raw message.inspect %>)
+      <% end %>
+    <% end %>
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<script type="text/javascript">
+   $("form").submit(function(){
+    console.log("submit")
+    $("form input:submit").prop("disabled", true)
+  });
+</script>
+
+<div class="edit-resto">
+  <%= form_for @resto do |f| %>
+  <div class="detalles margin-top">
+    <p>Detalles</p>
+    <%= f.text_area :details,:maxlength => 85 ,:size => "30x2"%>
+  </div>
+  <div class="margin-top">
+    <p>Telefono</p>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="margin-top">
+    <p>Atributos</p>
+    <div>
+      <%= f.check_box :hasReservas %>
+      <%= f.label :reservas  %>
+    </div>
+    <div>
+      <%= f.check_box :hasParking %>
+      <%= f.label :estacionamiento  %>
+    </div>
+    <div>
+      <%= f.check_box :hasTickets %>
+      <%= f.label :cheque_restaurant  %>
+    </div>
+    <div>
+      <%= f.check_box :hasWifi %>
+      <%= f.label :wifi  %>
+    </div>
+    <div>
+      <%= f.check_box :hasDelivery %>
+      <%= f.label :delivery  %>
+    </div>
+  </div>
+  <div class="margin-top">
+    <p>Tipo</p>
+    <%= f.select :resto_tipo_id, options_from_collection_for_select(RestoTipo.all, :id, :name)  %>
+  </div>
+  <div class="margin-top">
+    <p>Imagen</p>
+    <%= f.file_field :avatar %>
+  </div>
+	<div id="horario" class="margin-top">
+    <p>Horario</p>
+  	<%= f.text_field :horario %>
+	</div>
+  <div class="actions ">
+    <%= f.submit  "Actualizar Información", class: "update-attr"%>
+  </div>
+  <% end %>
+
+</div>

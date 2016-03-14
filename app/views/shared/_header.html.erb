@@ -1,0 +1,23 @@
+<div class="header">
+  <% if @current_admin %>
+    <div class="logo-admin">
+      <%= image_tag("logo.png") %>
+    </div>
+    <div class="side-menu">
+      <%= render 'shared/header_menu'%>
+    </div>
+    <div class="log-out">
+      <li><%= link_to "cerrar sesion" , destroy_owner_session_path, method: :delete %></li>
+    </div>
+  <% elsif params[:controller] == 'devise/sessions'%>
+    <div class="header-login">
+      <div class="logo-login">
+        <%= image_tag("logo-solo.png") %>
+      </div>
+    </div>
+  <% else %>
+    <div class="logo-admin">
+      <%= image_tag("logo.png") %>
+    </div>
+  <% end %>
+</div>

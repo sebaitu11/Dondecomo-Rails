@@ -1,0 +1,27 @@
+<div class="carta">
+  <h1>Platos de <%= @categoria.name%></h1>
+  <table>
+
+    <tbody>
+      <tr class="plat-title">
+        <td>Nombre</td>
+        <td>Precio</td>
+        <td>Descripción</td>
+      </tr>
+      <% @platos.each do |plato| %>
+        <tr class="carta-row">
+          <td><%= plato.name%></td>
+          <td><%= plato.price%></td>
+          <td><%= plato.description%></td>
+          <td><%= link_to 'Editar', edit_categoria_plato_path(plato.categoria.id,plato) %></td>
+          <td><%= link_to 'Eliminar', categoria_plato_path(plato.categoria.id,plato),class: "eliminar" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Añadir Plato', new_categoria_plato_path(@categoria.id), class: "new-cat" %>
+
+</div>

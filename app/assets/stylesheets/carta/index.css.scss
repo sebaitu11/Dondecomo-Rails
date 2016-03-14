@@ -1,0 +1,30 @@
+.carta {
+  table {
+    width: 100%;
+  }
+  .cat-title {
+    font-weight: bold;
+  }
+  td {
+    padding: 1em 3em;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  tr:nth-child(even){
+    background: #f1f1f1;
+  }
+  .carta-row {
+    border-top: 1px dashed #ccc;
+  }
+  .new-cat {
+    background: #f06d22;
+    border-radius: 12px;
+    color: #fff;
+    float: right;
+    margin: 0 2em; 
+    padding: 0.8em;
+  }
+  .eliminar {
+    color: red;
+  }
+}

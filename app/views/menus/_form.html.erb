@@ -1,0 +1,72 @@
+<script type="text/javascript">
+   $("#new_menu").submit(function(){
+    $(".spiner").fadeIn();
+    $(".spiner").spin({color: "#fff", speed: 1.8})
+    $("input:submit").prop("disabled", true).css("background","#ccc")
+
+  });
+</script>
+
+<div class="col-sm-12">
+	<div class="form-item">
+	<%= form_for([current_owner.resto,@menu]) do |f| %>
+	     <div class="col-sm-4">
+		     <div class="form-field">
+		        <p>Nombre :</p>
+		        <%= f.text_field :name ,:maxlength => 50 ,:size => "30"%>
+		     </div>
+		     <div class="form-field">
+		      <p>Precio :</p>
+		      <%= f.text_field :price,size: "6" %>
+		     </div>
+		     <div class="form-field">
+		      <p>Entrada :</p>
+		      <%= f.text_field :entrada, size: "30" %>
+		     </div>
+	     </div>
+			 <div class="col-sm-4">
+		     <div class="form-field">
+		      <p>Bebestible :</p>
+		      <%= f.text_field :bebestible, size: "30" %>
+		     </div>
+		     <div class="form-field">
+		      <p>Fondo :</p>
+		      <%= f.text_field :fondo ,size: "30"%>
+		     </div>
+		     <div class="form-field">
+		      <p>Postre :</p>
+		      <%= f.text_field :postre, size: "30"%> 
+		     </div>
+			 </div>
+			 <div class="col-sm-4">
+			   <div class="form-field image">
+			    <%= f.file_field :avatar %>
+			   </div>
+				 <div class="image-container">
+					<% if @menu.new_record? %>
+						<h1>Sube una imagen</h1>
+					<% else %>
+						<img src="<%= @menu.image_url%>">
+					<% end %>
+				 </div>
+			 </div>
+		 
+   
+	  <% if @menu.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+
+	      <ul>
+	      <% @menu.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	    <div class="actions">
+	      <%= f.submit ( f.object.new_record? ? "Crear Menu" : "Actualizar Menu")%>
+	    </div>
+	  <% end %>
+	</div>
+</div>

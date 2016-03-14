@@ -1,0 +1,209 @@
+.alert {
+  margin-bottom: 0 !important;
+  padding : 8px !important;
+}
+
+
+.mini-image {
+  img {
+    width: 100px;
+  }
+}
+.canvas-home {
+  background: #fff;
+  overflow: hidden;
+}
+.canvas {
+  background: #fff;
+  margin: 0 auto;
+  padding: 1.5em;
+	position :relative;
+  overflow: hidden;
+	width: 100%;
+}
+
+.admin-modal {
+  p {
+    text-align: center;
+  }
+}
+
+.padding-right-none {
+  padding-right: 0;
+}
+.edit-resto {
+  border-right :1px dashed #ccc;
+  padding: 1em;
+  text-align: left;
+  .margin-top {
+		border-bottom: 1px dashed #ccc;
+    padding : 1em 0;
+  }
+  .update-attr {
+      background: #f06d22 !important;
+      border-radius: 4px !important;
+      border: none !important;
+      color: #fff !important;
+      font-weight: sans-serif !important;
+      padding: 0.5em 1em !important;
+      text-shadow: none !important;
+  }
+  input {
+    border-radius: 4px !important;
+    border: 1px solid #ebebeb !important;
+    color: #333 !important;
+    line-height: 20px !important; 
+    padding: 0.4em 0.8em !important;
+    width: 95% !important;
+  }
+  input[type="checkbox"] {
+    display: inline-block;
+    width: inherit !important;
+  }
+  .detalles {
+    textarea {
+      border-color: #ebebeb !important;
+      border-radius: 4px !important;
+      color: #333;
+      line-height: 20px !important; 
+      padding: 1em !important;
+      width: 95% !important;
+    }
+  }
+  .imagen {
+    input {
+      border: none;
+      color: #ccc;
+    }
+  }
+	#horario {
+    border: none;
+		overflow: hidden;
+	}
+  .left-admin {
+    float: left;
+    width: 50%;
+  }
+  .right-admin {
+    float: right;
+    width: 50%;
+  }
+	select {
+		width : 80%;
+	}
+  .actions {
+		overflow: hidden;
+		margin-top: 2em;
+		margin-right: 0.5em;
+    input {
+      background: #f06d22;
+      border: none;
+      color: #fff;
+    }
+  }
+}
+p {
+	font-weight : 500;
+	margin: 8px 0;
+}
+
+.info-resto {
+  float: left;
+  text-align: center;
+  width: 50%;
+	.online {
+    background: green;
+  }
+  .offline {
+    background: red;
+  }
+  .header-resto {
+    h4 {
+      width: 75px;
+      margin: 14px auto;
+      color: #fff;
+      padding: 0.3em 0.1em;
+      border-radius: 10px;
+      font-size: 0.9em;
+    }
+    h2 {
+  		font-family: 'Ubuntu', sans-serif;
+  		margin-bottom :0.6em;
+      text-transform: capitalize;
+  	}
+    img {
+      background: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 1px 6px 8px 1px rgba(0,0,0,0.2);
+      padding: 24px;
+    }
+  }
+  p {
+    color: #333;
+    margin-top: 2em;
+  }
+  .fumadores {
+      margin-top: 0.9em !important;
+    }
+  .activo {
+    img {
+      border-color: #f06d22 !important;
+    }
+  }
+  .attr { margin-top:2em ;overflow: hidden;}
+  .circle {
+    float: left;
+    margin: 1.2em auto;
+    width: 16%;
+    .on {
+      border-color : #f06d22 !important;
+      color: #f06d22 !important;
+    }
+    .menu {
+      padding: 9px 22px;
+    }
+    i {
+      border: 1px solid #ccc;
+      border-radius: 52px;
+			color : #888;
+      font-size: 2em;
+      padding: 9px 13px;
+    }
+    img {
+      border-radius: 52px;
+      border: 1px solid #ccc;
+      margin-top: -1px;
+      padding: 10px 10px;
+      width: 56px;
+    }
+    p {
+      margin: 8px 0 ;
+    }
+  }
+  .data-container {
+    overflow: hidden;
+    .data {
+      float: left;
+      width: 33%;
+      p {
+        margin: 0;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .tags {
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    overflow: hidden;
+    li {
+      float: left;
+      font-size: 14px;
+      margin: 0.6em 1em;
+      list-style-type: none;
+    }
+    li:before {
+      content: "\2022";
+      margin-right: 3px;
+    }
+  }
+}

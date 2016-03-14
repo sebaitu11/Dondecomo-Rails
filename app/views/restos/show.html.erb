@@ -1,0 +1,27 @@
+<div class="contenedor" ng-app="RestoImage">
+  <div class="canvas-home">
+    <div class="col-md-6 padding-right-none">
+      <%= render "restos/form" %>
+    </div>
+    <div class="info-resto">
+      <div class="header-resto">
+        <% if @resto.online %>
+          <h4 class="online">Online</h4>
+        <% else %>
+          <h4 class="offline">Offline</h4>
+        <% end %>
+        <h2><%= @resto.name %></h2>
+        <%= image_tag @resto.avatar %>
+        <% if not @past_due %>
+          <div class="state-change">
+            <% if @resto.online %>
+              <%= link_to "Dejar de publicar en la app", unpublish_resto_resto_path(current_owner.resto) ,class: "red", method: :post %>
+            <% else %>
+              <%= link_to "Publicar en la app", publish_resto_resto_path(current_owner.resto) ,class: "green", method: :post %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

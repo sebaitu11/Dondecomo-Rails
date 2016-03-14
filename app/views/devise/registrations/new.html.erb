@@ -1,0 +1,39 @@
+<div class="contenedor">
+  <div class="canvas">
+    <div class="col-md-6 info">
+      <h2>Bienvenido a Dónde Como</h2>
+      <ul>
+        <li>Solo por $14.990/mes.</li>
+        <li>Todos los clientes nuevos <strong>tienen 30 días gratis sin ninguna obligación o compromiso.</strong></li>
+        <li>Ningun pago requerido, solo llena el formulario y listo.</li>
+      </ul>
+      <%= image_tag("chef.png") %>
+    </div>
+    <div class="col-md-6">
+      <div class="sign-up-box">
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+        <div><%= f.label :Tu_nombre_completo %>
+          <%= f.text_field :name, autofocus: true, placeholder: 'John Doe' %></div>
+
+          <div><%= f.label :nombre_del_restaurante %>
+            <%= f.text_field :resto_name , placeholder: 'PF Changs'%></div>
+
+            <%= f.label :email %>
+            <div><%= f.email_field :email,placeholder: 'ejemplo@donde-como.cl'%></div>
+
+            <div><%= f.label :contraseña %>
+              <%= f.password_field :password, autocomplete: "off" %></div>
+
+
+              <div><%= f.submit "Empezar mi mes gratis" , class:"button-form"%></div>
+
+              <%= devise_error_messages! %>
+              <% end %>
+
+            </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+.content {
+	h1 {
+		font-size : 1.8em;
+		margin: 1em 0 0 0;
+		text-align: center;
+	}
+	.subtitle {
+		margin :0.4em 0 2.5em 0;
+		color: #999;
+		font-family: 'Ubuntu', sans-serif;
+		font-size :1.1em;
+	}
+	.padding {
+		float :left;
+		padding : 1.3em 0 1em 1em;
+	}
+	.padding-right {
+		padding-right : 1em;
+	}
+  .table-title {
+		font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+  }
+  td {
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: lighter;
+    padding: 1em 3em;
+    text-align: center;
+  }
+  tr:nth-child(even){
+    background: #f7f7f7;
+  }
+  .new-item {
+    background: #f06d22;
+    border-radius: 4px;
+    color: #fff;
+    float: right;
+		font-family: 'Ubuntu', sans-serif;
+    padding: 0.8em 2em;
+  }
+  .eliminar {
+    color: red;
+  }
+}
+
+.volver {
+	position: absolute;
+	top: 3em;
+	left: 4em;
+	i {
+		color :#f06d22;
+		font-size :2.3em;
+		float: left;
+	}
+	p {
+		color : #999;
+		float: left;
+		margin-left :0.9em;
+		&:hover {
+			color: #f06d22;
+	  }
+}}
+  

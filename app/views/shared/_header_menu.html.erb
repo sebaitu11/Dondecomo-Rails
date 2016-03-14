@@ -1,0 +1,30 @@
+<div class="options-menu">
+  <li class="<%= 'active' if params[:controller] == 'restos' %>">
+    <%= link_to resto_path(current_owner.resto.id) do %>
+      <i class="fa fa-home"></i>
+      <span>Home</span>
+    <% end %>
+  </li>
+
+  <li class="<%= 'active' if params[:controller] == 'menus' %>">
+    <%= link_to resto_menus_path(current_owner.resto) do %>
+      <i class="fa fa-cutlery "></i>
+      <span>Menus del Día</span>
+    <% end %>
+  </li>
+
+  <li class="<%= 'active' if params[:controller] == 'promos' %>">
+    <%= link_to resto_promos_path(current_owner.resto) do %>
+      <i class="fa fa-tags "></i>
+      <span>Promociones</span>
+    <% end %>
+  </li>
+
+  <li class="<%= 'active' if params[:controller] == 'configurations' %>">
+    <%= link_to resto_configurations_path(current_owner.resto) do %>
+      <i class="fa fa-gear "></i>
+      <span>Configuracion</span>
+    <% end %>
+  </li>
+
+</div>

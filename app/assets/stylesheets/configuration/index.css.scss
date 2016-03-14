@@ -1,0 +1,33 @@
+.config {
+  h1,h3,h4 {
+    text-align: center;
+  }
+  .form {
+    text-align: center;
+    p {
+      color: #888;
+      text-align: center;
+    }
+    select {
+      margin: 0 auto;
+      width: 200px;
+    }
+    textarea{
+      margin: 0 auto;
+      width: 300px;
+    }
+  }
+}
+
+.pay-btn {
+  background: #2980b9;
+  border-radius: 8px;
+  border: none !important;
+  color: white;
+  padding: 5px 30px;
+  margin: 0 auto;
+  display: block;
+  &:hover {
+    background-color: #2980b9 !important;
+  }
+}

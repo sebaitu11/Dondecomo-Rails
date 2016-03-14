@@ -1,0 +1,54 @@
+<div class="modal fade menu-modal" id="myModal<%= menu.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Editando Menu</h4>
+        </div>
+        <div class="modal-body menu-content">
+            <div class="left-side">
+            <%= form_for menu, :html => { :multipart => true } do |f| %>
+             <div class="input-modal">
+               <p>Nombre</p>
+               <%= f.text_field :name %>
+             </div>
+             <div class="input-modal">
+               <p>Descripción</p>
+               <%= f.text_area :description , :cols => "30", :rows => "3" %>
+             </div>
+             <div class="input-modal">
+               <p>Precio</p>
+               <%= f.text_field :price %>
+             </div>
+             <div class="imagen-field">
+               <p>Imagen</p>
+               <%= f.file_field :avatar %>
+             </div>
+             <div class="modal-footer menu-footer">
+              <div class="actions">
+               <button type="button" class="btn btn-default close-btn" data-dismiss="modal">Close</button>
+               <%= f.submit %>
+             </div>
+          </div>
+            <% if menu.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(menu.errors.count, "error") %> prohibited this promo from being saved:</h2>
+
+                <ul>
+                <% menu.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+        <% end %>
+            </div>
+            <div class="right-side">
+              <%= image_tag(menu.image_url) %>
+            </div>
+          </form> 
+        </div>
+      </div>
+    </div>
+  </div>

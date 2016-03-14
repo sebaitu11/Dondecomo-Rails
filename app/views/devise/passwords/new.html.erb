@@ -1,0 +1,17 @@
+<div class="contenedor">
+  <div class="canvas">
+    <h1>Recupera tu contraseña</h1>
+    <h4>Solo ingresa tu correo y recibiar las instrucciones para recueperar tu contraseña</h4>
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="wrapper-form">
+      <div class="margin-bottom email-field"><%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, placeholder: "ejemplo@donde-como.cl" %></div>
+
+        <div><%= f.submit "Recuperar contraseña",class:"button-form" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>

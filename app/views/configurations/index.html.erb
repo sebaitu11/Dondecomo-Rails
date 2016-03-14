@@ -1,0 +1,45 @@
+<div class="contenedor content">
+  <div class="canvas">
+
+    <h1>Mi Subscripción</h1>
+
+    <% if @error %>
+      <h4 class="error"><%= @error %></h4>
+    <% elsif @past_due %>
+      <h4 class="error"><%= @past_due %></h4>
+      <button class="pay-btn">Pagar</button>
+    <% else %>
+      <% if @sub.amount == 0 %>
+        <h4>Te quedan <%= @days_left %> para disfrutar del periodo de prueba</h4>  
+      <% else %>
+        <h4>Te quedan <%= @days_left %> días para el siguiente pago</h4>  
+      <% end %>
+    <% end %>
+
+    <div class="history">
+      <h3>Historial de pagos</h3>
+      <% if @blank %>
+        <p>No se ha realizado ningun pago aun</p>
+      <% else %>
+        <table>
+          <thead>
+            <th>Monto</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Termino</th>
+            <th>Tipo</th>
+          </thead>
+          <tbody>
+            <% @subscriptions.each do |s| %>
+              <tr>
+                <td> <%= s.amount %> </td>
+                <td> <%= s.created_at %> </td>
+                <td> <%= s.expiration_date %> </td>
+                <td> <%= s.mode %> </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>

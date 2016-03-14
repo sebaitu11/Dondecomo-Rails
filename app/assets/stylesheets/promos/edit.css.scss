@@ -1,0 +1,50 @@
+.form-promo {
+  div {
+    padding: 1em;
+  }
+  input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 4px;
+  }
+  .actions {
+    input {
+      background: #f06d22;
+      border:none;
+      border-radius: 12px;
+      color: #fff;
+      float: right;
+      padding: 0.8em;
+    }
+  }
+  .form-field:nth-child(even){
+    background: #f1f1f1;
+  }
+  .image {
+    input {
+     border: none; 
+    }
+  }
+}
+
+.form-field {
+  .image-container {
+    h1 {
+      font-size: 25px;
+    }
+  }
+  textarea {
+    color: #333;
+    line-height: 24px;
+    padding: 10px;
+  }
+}
+
+.image-promo {
+  position: absolute;
+  top: 18em;
+  right: 8em;
+  background: #fff;
+  -webkit-box-shadow: 4px 5px 5px 1px rgba(0,0,0,0.2);
+  padding: 1em;
+}

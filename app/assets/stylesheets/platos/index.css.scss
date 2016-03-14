@@ -1,0 +1,35 @@
+.actions {
+  input {
+    background: #f06d22;
+    border:none;
+    border-radius: 12px;
+    color: #fff;
+    padding: 0.8em;
+  }
+}
+.plat-title {
+  font-weight: bold;
+}
+
+.form-cat {
+  .actions {
+    margin-top: -3em;
+    overflow: hidden;
+  }
+  .form-field {
+    p {
+      font-weight: bold;
+    }
+    input {
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      padding: 4px;
+    }
+  }
+}
+
+
+.carta {
+  border-top: 1px dashed #ccc;
+  margin: 2em 0;
+}
